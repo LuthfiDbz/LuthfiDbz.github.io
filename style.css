@@ -22,11 +22,41 @@ body {
 
 /* Jumbotron */
 .jumbotron {
+  position: relative;
   display: grid;
   background-color: #275996;
   height: 125vh;
   color: #E6EDF3;
 }
+
+/* Nav */
+.menu {
+  margin: 0 120px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .menubar ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menubar li {
+  list-style: none;
+  margin: 0 16px;
+}
+
+.menubar a{
+  text-decoration: none;
+  color: #E6EDF3;
+}
+
+.menubar .button {
+  color: #274696;
+  font-size: 18px;
+}
+
 
 .header {
   display: grid;
@@ -125,7 +155,7 @@ body {
   display: grid;
   padding-top: 200px;
   margin-top: -100px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .portfolio h2 {
@@ -205,6 +235,76 @@ body {
   color: #F9C717;
 }
 
+/* CTA */
+.CTA {
+  display: grid;
+  place-content: center;
+  z-index: 2;
+}
+
+.CTAContent {
+  display: flex;
+  place-items: center;
+  background-color: #F9C717;
+  padding: 32px;
+  border-radius: 10px;
+  margin-top: -60px;
+  box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+
+.CTA h2 {
+  width: 533px;
+  font-size: 24px;
+  color: #275996;
+}
+
+.CTA .button {
+  background-color: #275996;
+  color: #E6EDF3;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  background-color: #275996;
+  margin-top: -60px;
+  color: #E6EDF3;
+}
+
+.footer ul li {
+  display: inline-block;
+}
+
+.footer .shortcut {
+  margin-top: 100px;
+}
+
+.footer .shortcut a {
+  text-decoration: none;
+  color: #E6EDF3;
+  margin: 0 16px;
+  font-weight: 500;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.footer hr {
+  color: #E6EDF3;
+  width: 83%;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  padding: 16px;
+  font-weight: 400;
+}
 
 /* Utility */
 .button {
