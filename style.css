@@ -12,33 +12,32 @@ On Tertier #274696
   padding: 0;
 }
 
+
+
 body {
   font-family: 'Rubik', sans-serif;
 }
 
-.container {
-  display: grid;
-}
-
 /* Jumbotron */
 .jumbotron {
-  position: relative;
-  display: grid;
   background-color: #275996;
-  height: 125vh;
+  height: 140vh;
   color: #E6EDF3;
+  justify-content: center;
+  justify-items: center;
+  padding: 0 16px;
 }
 
 /* Nav */
 .menu {
-  margin: 0 120px;
-  margin-top: 32px;
+  padding-top: 32px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 200px;
 }
 
 .menu .menubar ul {
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 
@@ -61,32 +60,42 @@ body {
 .header {
   display: grid;
   grid-template-areas: 
-    'content image';
-  margin-top: 0px;
-  margin: 0 120px;
+    'image'
+    'content'
+    ;
+  margin-top: -80px;
+  justify-items: center;
 }
+
+/* .header {
+  display: flex;
+} */
 
 .heroContent {
   grid-area: content;
-  width: 600px;
   margin-top: -30px;
 }
 
 .heroContent h1 {
-  font-size: 64px;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .heroContent h4 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 24px;
   margin-bottom: 30px;
 }
 
 .heroImage {
   grid-area: image;
   margin-top: -110px;
+  text-align: center;
+}
+
+.heroImage img {
+  width: 90%;
 }
 
 /* Services */
@@ -95,12 +104,12 @@ body {
   display: grid;
   justify-items: center;
   justify-content: center;
-  margin-top: -180px;
+  margin-top: -220px;
   z-index: 2;
 }
 
 .services h2 {
-  font-size: 45px;
+  font-size: 24px;
   color: #E6EDF3;
   margin-bottom: 30px;
 }
@@ -109,7 +118,9 @@ body {
   color: #274696;
   display: grid;
   grid-template-areas: 
-  'service1 service2 service3';
+  'service1'
+  'service2'
+  'service3';
   background-color: #F9C717;
   border-radius: 10px;
   padding: 16px;
@@ -129,7 +140,7 @@ body {
 }
 
 .servicesContent h5 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .service1 {
@@ -159,7 +170,7 @@ body {
 }
 
 .portfolio h2 {
-  font-size: 45px;
+  font-size: 24px;
   color: #274696;
   margin-bottom: 30px;
 }
@@ -167,8 +178,9 @@ body {
 .portfolioContent {
   display: grid;
   grid-template-areas: 
-    'card1 card2';
-  margin: 0 120px;
+    'card1'
+    'card2';
+  margin: 0 16px;
   gap: 24px;
   margin-bottom: 26px;
 }
@@ -208,22 +220,22 @@ body {
 .topText h4 {
   font-weight: 500;
   margin-bottom: 8px;
-  font-size: 21px;
+  font-size: 16px;
 }
 
 .topText h5 {
-  font-weight: 400;
+  font-weight: lighter;
 }
 
 .card .image {
   background-color: grey;
   color: grey;
-  height: 335px;
+  height: 280px;
 }
 
 .card .bottom {
   padding: 16px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .bottom p {
@@ -244,17 +256,19 @@ body {
 
 .CTAContent {
   display: flex;
+  flex-direction: column;
   place-items: center;
   background-color: #F9C717;
   padding: 32px;
   border-radius: 10px;
   margin-top: -60px;
   box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  text-align: center;
 }
 
 .CTA h2 {
-  width: 533px;
-  font-size: 24px;
+  width: 200px;
+  font-size: 16px;
   color: #275996;
 }
 
@@ -308,10 +322,101 @@ body {
 
 /* Utility */
 .button {
+  font-size: 14px;
   text-decoration: none;
   background-color: #F9C717;
   color: #274696;
   padding: 12px 24px;
   border-radius: 20px;
   font-weight: 600;
+}
+
+
+/* DESKTOP VERSION */
+@media (min-width: 768px) {
+  .jumbotron {
+    justify-content: center;
+    height: 125vh;
+    padding: 0 120px;
+  }
+
+  .menu .menubar ul {
+    display: flex;
+  }
+
+  .header {
+    grid-template-areas: 
+      'content image';
+    margin-top: 0px;
+  }
+
+  .heroContent h1 {
+    font-size: 64px;
+  }
+
+  .heroContent h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .heroImage img {
+    width: auto;
+  }
+
+  /* Services */
+  .services {
+    margin-top: -180px;
+  }
+
+  .services h2 {
+    font-size: 45px;
+  }
+
+  .servicesContent h5 {
+    font-size: 24px;
+  }
+
+  .servicesContent {
+    grid-template-areas: 
+    'service1 service2 service3';
+  }
+
+  /* Portfolio */
+  .portfolioContent {
+    grid-template-areas: 
+    'card1 card2';
+    margin: 0 120px;
+    margin-bottom: 26px;
+  }
+
+  .portfolio h2 {
+    font-size: 45px;
+  }
+
+  .topText h4 {
+    font-size: 21px;
+  }
+
+  .card .image {
+    height: 335px;
+  }
+  
+  .card .bottom {
+    font-size: 16px;
+  }
+
+  /* CTA */
+  .CTAContent {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .CTA h2 {
+    width: 533px;
+    font-size: 24px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
 }
