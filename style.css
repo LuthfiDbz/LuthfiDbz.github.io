@@ -37,8 +37,24 @@ body {
 }
 
 .menu .menubar ul {
-  display: none;
-  justify-content: space-between;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #F9C717;
+  transform: translateY(-100%);
+  transition: all 1s;
+  opacity: 1;
+}
+
+.menu ul.slide {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menubar li {
@@ -48,12 +64,73 @@ body {
 
 .menubar a{
   text-decoration: none;
-  color: #E6EDF3;
+  color: #275996;
+  font-weight: 500;
 }
 
 .menubar .button {
-  color: #274696;
+  color: #E6EDF3;
   font-size: 18px;
+  background-color: #275996;
+  font-weight: 400;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  border: 1px solid white;
+  padding: 7px;
+  border-radius: 5px;
+  margin-top: -12px;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -6px;
+  top: -4px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 100% 100%;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 100% 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-2px, -3px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0)
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(45deg) translate(-3px, 5px);
 }
 
 
@@ -346,6 +423,33 @@ body {
 
   .menu .menubar ul {
     display: flex;
+    position: relative;
+    right: 0;
+    top: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translateY(0%);
+    transition: none;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menubar a{
+    color: #E6EDF3;
+    font-weight: 400;
+  }
+  
+  .menubar .button {
+    color: #274696;
+    background-color: #F9C717;
+    font-weight: 500;
   }
 
   .header {
