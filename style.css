@@ -36,6 +36,11 @@ body {
   margin-bottom: 200px;
 }
 
+.menu img {
+  width: 200px;
+  margin-top: -20px;
+}
+
 .menu .menubar ul {
   display: flex;
   position: absolute;
@@ -237,7 +242,7 @@ body {
 
 /* Portfolio */
 .portfolio {
-  background-color: #B5D7F2;
+  background-color: #d3ebff;
   justify-items: center;
   justify-content: center;
   display: grid;
@@ -256,7 +261,8 @@ body {
   display: grid;
   grid-template-areas: 
     'card1'
-    'card2';
+    'card2'
+    'card3';
   margin: 0 16px;
   gap: 24px;
   margin-bottom: 26px;
@@ -274,9 +280,29 @@ body {
   grid-area: card1;
 }
 
+.card1 .image {
+  background-image: url(img/financial.jpg);
+  background-size: cover;
+}
+
 .card2 {
   grid-area: card2;
 }
+
+.card2 .image {
+  background-image: url(img/course.jpg);
+  background-size: cover;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card3 .image {
+  background-image: url(img/ecommerce.jpg);
+  background-size: cover;
+}
+
 .card .top {
   display: flex;
   padding: 16px;
@@ -307,7 +333,7 @@ body {
 .card .image {
   background-color: grey;
   color: grey;
-  height: 280px;
+  height: 200px;
 }
 
 .card .bottom {
@@ -382,6 +408,12 @@ body {
   color: #E6EDF3;
   margin: 0 16px;
   font-weight: 500;
+}
+
+.footer .socMedia img {
+  width: 30px;
+  margin: 4px;
+  margin-top: 24px;
 }
 
 .footer p {
@@ -459,7 +491,7 @@ body {
   }
 
   .heroContent h1 {
-    font-size: 64px;
+    font-size: 54px;
   }
 
   .heroContent h4 {
@@ -477,7 +509,7 @@ body {
   }
 
   .services h2 {
-    font-size: 45px;
+    font-size: 38px;
   }
 
   .servicesContent h5 {
@@ -497,13 +529,13 @@ body {
 
   .portfolioContent {
     grid-template-areas: 
-    'card1 card2';
-    margin: 0 120px;
+    'card1 card2 card3';
+    margin: 0 100px;
     margin-bottom: 26px;
   }
 
   .portfolio h2 {
-    font-size: 45px;
+    font-size: 38px;
   }
 
   .topText h4 {
@@ -511,7 +543,7 @@ body {
   }
 
   .card .image {
-    height: 335px;
+    height: 220px;
   }
   
   .card .bottom {
@@ -551,6 +583,12 @@ body {
     margin: 0 16px;
     font-size: 16px;
     font-weight: 500;
+  }
+
+  .footer .socMedia img {
+    width: 40px;
+    margin: 8px;
+    margin-top: 32px;
   }
   
   .footer p {
